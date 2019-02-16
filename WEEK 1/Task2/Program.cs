@@ -10,15 +10,23 @@ namespace Task2
     {
         public string name;
         public int id;
+        public int year;
+
         public Student(string n, int i)
         {
-            name = "S1";
-            id = 101;
-       
+            name = n;
+            id = i;
+            year = 1;
         }
         public void PrintInfo()
         {
-            Console.Write(name + " " + id + " ");
+            Console.WriteLine(name + " " + id + " " + year);
+
+        }
+        public void IncrementYearStudy()
+        {
+            year++;
+
         }
     }
    
@@ -28,11 +36,13 @@ namespace Task2
         static void Main(string[] args)
         {
 
-            Student s = new Student("",0);
-            int yy = 1;
+            Student s = new Student("S1",101);
+          
            
             s.PrintInfo();
-            Console.WriteLine(yy + 1);
+            s.IncrementYearStudy();
+            s.PrintInfo();
+            
 
         }
     }

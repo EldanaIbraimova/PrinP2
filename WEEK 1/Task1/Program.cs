@@ -21,16 +21,16 @@ namespace Task1
             {
                 int x = int.Parse(nums[i]);
                 int cnt = 0;//счетчик делителей 
-                for (int j = 1; j < x; ++j)
+                for (int j = 2; j < Math.Sqrt(x); ++j)
                 {
                     if (x % j == 0)
                     {
-                        ++cnt;ы
+                        ++cnt;
                     }
 
                 }
 
-                if (cnt == 1)
+                if (cnt == 0)
                 {
                     prime++;
                     answer = answer + nums[i] + " ";
@@ -41,6 +41,6 @@ namespace Task1
 
            
             
-        }ы
+        }
     }
 }
